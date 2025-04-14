@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DriverService } from '../../services/driver.service';
-import { DriverDirective } from '../../directives/driver.directive';
 import { DRIVER_STEPS, TOUR_STEPS } from '../../constants/driver-steps.constants';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, DriverDirective],
   template: `
     <div class="p-4">
       <h2
@@ -49,5 +45,4 @@ export class HomeComponent {
   startTour(): void {
     this.driverService.startTour(TOUR_STEPS);
   }
-
 }

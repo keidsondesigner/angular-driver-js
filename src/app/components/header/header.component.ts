@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DriverDirective } from '../../directives/driver.directive';
 import { DRIVER_STEPS } from '../../constants/driver-steps.constants';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, DriverDirective],
   template: `
     <header class="bg-blue-600 p-4">
       <nav class="flex justify-between items-center">

@@ -3,8 +3,7 @@ import { DriverService } from '../services/driver.service';
 import { DrivePosition, DriveAlign } from '../enums/driver.enum';
 
 @Directive({
-  selector: '[appDriver]',
-  standalone: true
+  selector: '[appDriver]'
 })
 export class DriverDirective implements OnInit {
   @Input() driverId!: string;
