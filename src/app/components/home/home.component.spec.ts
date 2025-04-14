@@ -12,7 +12,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeComponent, DriverDirective],
+      declarations: [HomeComponent, DriverDirective],
       providers: [DriverService]
     }).compileComponents();
 
@@ -30,14 +30,14 @@ describe('HomeComponent', () => {
   it('should have welcome title with driver directive', () => {
     const welcome = fixture.debugElement.query(By.css('h2'));
     expect(welcome).toBeTruthy();
-    expect(welcome.attributes['ng-reflect-driver-id']).toBe('step4');
+    expect(welcome.attributes['ng-reflect-driver-id']).toBe('4');
     expect(welcome.attributes['ng-reflect-drive-title']).toBe('Boas-vindas');
   });
 
   it('should have content section with driver directive', () => {
     const content = fixture.debugElement.query(By.css('div[appDriver]'));
     expect(content).toBeTruthy();
-    expect(content.attributes['ng-reflect-driver-id']).toBe('step5');
+    expect(content.attributes['ng-reflect-driver-id']).toBe('5');
     expect(content.attributes['ng-reflect-drive-title']).toBe('Conteúdo');
   });
 

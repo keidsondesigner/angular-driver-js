@@ -2,28 +2,28 @@ import { DrivePosition, DriveAlign } from '../enums/driver.enum';
 
 export const DRIVER_STEPS = {
   LOGO: {
-    id: 'step1',
+    id: '1',
     title: 'Logo',
     description: 'Este é o logo da nossa aplicação',
     drivePosition: DrivePosition.OVER,
     driveAlign: DriveAlign.START
   },
   ABOUT: {
-    id: 'step2',
+    id: '2',
     title: 'Sobre',
     description: 'Clique aqui para saber mais sobre nós',
     drivePosition: DrivePosition.BOTTOM,
     driveAlign: DriveAlign.CENTER
   },
   CONTACT: {
-    id: 'step3',
+    id: '3',
     title: 'Contato',
     description: 'Entre em contato conosco',
     drivePosition: DrivePosition.BOTTOM,
     driveAlign: DriveAlign.END
   },
   WELCOME: {
-    id: 'step4',
+    id: '4',
     title: 'Boas-vindas',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
       'Lorem Ipsum has been the industrys standard dummy text ever since the, when an unknown printer ' +
@@ -35,7 +35,7 @@ export const DRIVER_STEPS = {
     driveAlign: DriveAlign.START
   },
   CONTENT: {
-    id: 'step5',
+    id: '5',
     title: 'Conteúdo',
     description: 'Área principal de conteúdo',
     drivePosition: DrivePosition.LEFT,

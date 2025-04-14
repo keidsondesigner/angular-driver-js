@@ -11,7 +11,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderComponent, DriverDirective],
+      declarations: [HeaderComponent, DriverDirective],
       providers: [DriverService]
     }).compileComponents();
 
@@ -29,21 +29,21 @@ describe('HeaderComponent', () => {
   it('should have logo element with driver directive', () => {
     const logo = fixture.debugElement.query(By.css('h1'));
     expect(logo).toBeTruthy();
-    expect(logo.attributes['ng-reflect-driver-id']).toBe('step1');
+    expect(logo.attributes['ng-reflect-driver-id']).toBe('1');
     expect(logo.attributes['ng-reflect-drive-title']).toBe('Logo');
   });
 
   it('should have about button with driver directive', () => {
     const aboutBtn = fixture.debugElement.queryAll(By.css('button'))[0];
     expect(aboutBtn).toBeTruthy();
-    expect(aboutBtn.attributes['ng-reflect-driver-id']).toBe('step2');
+    expect(aboutBtn.attributes['ng-reflect-driver-id']).toBe('2');
     expect(aboutBtn.attributes['ng-reflect-drive-title']).toBe('Sobre');
   });
 
   it('should have contact button with driver directive', () => {
     const contactBtn = fixture.debugElement.queryAll(By.css('button'))[1];
     expect(contactBtn).toBeTruthy();
-    expect(contactBtn.attributes['ng-reflect-driver-id']).toBe('step3');
+    expect(contactBtn.attributes['ng-reflect-driver-id']).toBe('3');
     expect(contactBtn.attributes['ng-reflect-drive-title']).toBe('Contato');
   });
 
