@@ -32,7 +32,9 @@ export const DRIVER_STEPS = {
       'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, ' +
       'and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
     drivePosition: DrivePosition.RIGHT,
-    driveAlign: DriveAlign.START
+    driveAlign: DriveAlign.START,
+    driveTextLink: 'Saiba mais',
+    driveUrlLink: 'https://oficialdoc.com.br/'
   },
   CONTENT: {
     id: '5',

@@ -21,7 +21,7 @@ describe('HeaderComponent', () => {
     spyOn(driverService, 'registerElement');
     fixture.detectChanges();
   });
-
+  
   it('should create', () => {
     expect(component).toBeTruthy();
   });
