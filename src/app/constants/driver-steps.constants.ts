@@ -33,6 +33,7 @@ export const DRIVER_STEPS = {
       'and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
     drivePosition: DrivePosition.RIGHT,
     driveAlign: DriveAlign.START,
+    driveDescriptionLink: 'Clique aqui para saber mais',
     driveTextLink: 'Saiba mais',
     driveUrlLink: 'https://oficialdoc.com.br/'
   },

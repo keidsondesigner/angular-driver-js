@@ -9,6 +9,7 @@ export class DriverDirective implements OnInit {
   @Input() driverId!: string;
   @Input() driveTitle!: string;
   @Input() driveDescription!: string;
+  @Input() driveDescriptionLink?: string;
   @Input() driveTextLink?: string;
   @Input() driveUrlLink?: string;
   @Input() drivePosition: DrivePosition = DrivePosition.BOTTOM;
@@ -42,7 +43,7 @@ export class DriverDirective implements OnInit {
       const linkHtml = tempDiv.innerHTML || tempDiv.textContent || '';
 
       // Adiciona o link ao final do description, com uma quebra de linha
-      description += `<br>${linkHtml}`;
+      description += `<br>${this.driveDescriptionLink}<br>${linkHtml}`;
     }
 
     this.driverService.registerElement(this.driverId, {

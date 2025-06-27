@@ -67,4 +67,30 @@ describe('DriverDirective', () => {
     expect(directive.drivePosition).toBe(DrivePosition.BOTTOM);
     expect(directive.driveAlign).toBe(DriveAlign.CENTER);
   });
+
+  it('should append a description link and a link to the description when driveDescriptionLink, driveTextLink and driveUrlLink are provided', () => {
+    directive.driverId = 'test-id';
+    directive.driveTitle = 'Test Title';
+    directive.driveDescription = 'Test Description';
+    directive.drivePosition = DrivePosition.RIGHT;
+    directive.driveAlign = DriveAlign.START;
+    directive.driveDescriptionLink = 'Clique aqui para saber mais';
+    directive.driveTextLink = 'Clique aqui';
+    directive.driveUrlLink = 'https://exemplo.com';
+
+    directive.ngOnInit();
+
+    const expectedLink = `<a href="https://exemplo.com" target="_blank" rel="noopener noreferrer" style="color:#3182ce;text-decoration:underline;">Clique aqui</a>`;
+    const expectedDescription = `Test Description<br>Clique aqui para saber mais<br>${expectedLink}`;
+
+    expect(driverService.registerElement).toHaveBeenCalledWith('test-id', {
+      element: el.nativeElement,
+      popover: {
+        title: 'Test Title',
+        description: expectedDescription,
+        side: DrivePosition.RIGHT,
+        align: DriveAlign.START
+      }
+    });
+  });
 });

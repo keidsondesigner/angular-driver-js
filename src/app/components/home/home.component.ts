@@ -13,6 +13,7 @@ import { DRIVER_STEPS, TOUR_STEPS } from '../../constants/driver-steps.constants
         [driveDescription]="DRIVER_STEPS.WELCOME.description"
         [drivePosition]="DRIVER_STEPS.WELCOME.drivePosition"
         [driveAlign]="DRIVER_STEPS.WELCOME.driveAlign"
+        [driveDescriptionLink]="DRIVER_STEPS.WELCOME.driveDescriptionLink"
         [driveTextLink]="DRIVER_STEPS.WELCOME.driveTextLink"
         [driveUrlLink]="DRIVER_STEPS.WELCOME.driveUrlLink"
         class="text-2xl mb-4"
